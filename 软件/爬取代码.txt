@@ -1,0 +1,17 @@
+fetch("https://ssl.freex.es/api/v2/mulus/071", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "authorization": "Basic MTAwMDE5ODI0MTo1ODExNmYxZmE4ZjdmMTBkYjA5NGQyMjBhNjU5MzYzZjQ3NDA5N2Uy",
+    "fx-api": "2.1.0",
+    "fx-appid": "com.gl1721.FreeX.web",
+    "fx-appkey": "5GHfjt25d3dOBiF56aR3L62TZp3Xj7sV7me1FZhG",
+    "fx-language": "zh-Hans",
+    "fx-nonce": "161464a0-c470-4810-a403-b73b77d57512",
+    "fx-signature": "ec102191f2d5c83910fcedc4959e9e42",
+    "fx-timestamp": "1778493415",
+    "fx-udid": "5e2c06ec-ecc5-448a-81b4-51d1327d3efe"
+  },
+  "credentials": "include"
+})
+.then(r => r.json())
+.then(console.log)
