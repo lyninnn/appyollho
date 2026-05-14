@@ -1,0 +1,28 @@
+fetch("https://ssl.freex.es/api/v2/mulus/729", {
+  method: "GET",
+  mode: "cors",
+  credentials: "include",
+  headers: {
+    accept: "application/json, text/plain, */*",
+    "accept-language": "zh-CN,zh;q=0.9",
+    authorization: "Basic MTAwMDE5ODI0MTo0ZmE5ZDJhZmIyNmZlOTU1ZTM5NjI2OWMwNzI4YmZlOTQ3MDA5NjM0",
+    "fx-api": "2.1.0",
+    "fx-appid": "com.gl1721.FreeX.web",
+    "fx-appkey": "5GHfjt25d3dOBiF56aR3L62TZp3Xj7sV7me1FZhG",
+    "fx-language": "zh-Hans",
+    "fx-nonce": "2918d1f2-ccca-4712-f85e-1b2d7813171a",
+    "fx-signature": "2b99b53e20feae71d54e9ef90f9a025a",
+    "fx-timestamp": "1778494859",
+    "fx-udid": "03d58fc1-5ac4-42eb-863d-8bfe2a5e91bb"
+  }
+})
+  .then(res => {
+    if (!res.ok) throw new Error("HTTP Error: " + res.status);
+    return res.json();
+  })
+  .then(data => {
+    console.log("返回数据：", data);
+  })
+  .catch(err => {
+    console.error("请求失败：", err);
+  });
